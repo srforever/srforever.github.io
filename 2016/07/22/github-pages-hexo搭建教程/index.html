@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="GitHub," />
 
 
 
@@ -84,16 +84,37 @@
 
 
 
-<meta name="description" content="使用方法1  在api引入之前配置dojoConfig12345678910&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;    var dojoConfig = &amp;#123;        async: true,        parseOnLoad: true,        packages: [&amp;#123;            name:">
+<meta name="description" content="部署简要概述
+###1.首先需要创建一个github账号，然后 新建一个代码仓库
+2.配置SSH密钥，建立本地与github的连接
+3.安装 Git 与Node.js
+4.安装 Markdownpad （win10系统下需要安装 awesomium_v1.6.6_sdk_win.exe）
+5.安装 Hexo 插件与选择主题
+6.美化主题与添加第三方插件
+7.使用 Markdown 语法与 Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="arcgis api for javascript 调用高德地图">
-<meta property="og:url" content="http://srforever.github.io/2016/08/01/arcgis api for javascript 调用高德地图/index.html">
+<meta property="og:title" content="github pages + hexo搭建教程">
+<meta property="og:url" content="http://srforever.github.io/2016/07/22/github-pages-hexo搭建教程/index.html">
 <meta property="og:site_name" content="srforever">
-<meta property="og:description" content="使用方法1  在api引入之前配置dojoConfig12345678910&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;    var dojoConfig = &amp;#123;        async: true,        parseOnLoad: true,        packages: [&amp;#123;            name:">
-<meta property="og:updated_time" content="2016-08-01T08:53:12.564Z">
+<meta property="og:description" content="部署简要概述
+###1.首先需要创建一个github账号，然后 新建一个代码仓库
+2.配置SSH密钥，建立本地与github的连接
+3.安装 Git 与Node.js
+4.安装 Markdownpad （win10系统下需要安装 awesomium_v1.6.6_sdk_win.exe）
+5.安装 Hexo 插件与选择主题
+6.美化主题与添加第三方插件
+7.使用 Markdown 语法与 Git">
+<meta property="og:updated_time" content="2016-07-22T10:05:01.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="arcgis api for javascript 调用高德地图">
-<meta name="twitter:description" content="使用方法1  在api引入之前配置dojoConfig12345678910&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;    var dojoConfig = &amp;#123;        async: true,        parseOnLoad: true,        packages: [&amp;#123;            name:">
+<meta name="twitter:title" content="github pages + hexo搭建教程">
+<meta name="twitter:description" content="部署简要概述
+###1.首先需要创建一个github账号，然后 新建一个代码仓库
+2.配置SSH密钥，建立本地与github的连接
+3.安装 Git 与Node.js
+4.安装 Markdownpad （win10系统下需要安装 awesomium_v1.6.6_sdk_win.exe）
+5.安装 Hexo 插件与选择主题
+6.美化主题与添加第三方插件
+7.使用 Markdown 语法与 Git">
 
 
 
@@ -114,10 +135,10 @@
 
 
 
-  <link rel="canonical" href="http://srforever.github.io/2016/08/01/arcgis api for javascript 调用高德地图/"/>
+  <link rel="canonical" href="http://srforever.github.io/2016/07/22/github-pages-hexo搭建教程/"/>
 
 
-  <title> arcgis api for javascript 调用高德地图 | srforever </title>
+  <title> github pages + hexo搭建教程 | srforever </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +276,7 @@
             
             
               
-                arcgis api for javascript 调用高德地图
+                github pages + hexo搭建教程
               
             
           </h1>
@@ -267,8 +288,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-01T16:39:25+08:00" content="2016-08-01">
-              2016-08-01
+            <time itemprop="dateCreated" datetime="2016-07-22T12:27:36+08:00" content="2016-07-22">
+              2016-07-22
             </time>
           </span>
 
@@ -314,10 +335,16 @@
       
 
       
-        <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>1  在api引入之前配置dojoConfig<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var dojoConfig = &#123;</div><div class="line">        async: true,</div><div class="line">        parseOnLoad: true,</div><div class="line">        packages: [&#123;</div><div class="line">            name: &quot;extLayers&quot;,</div><div class="line">            location: location.pathname.replace(/\/[^/]*$/, &apos;&apos;) + &apos;/extLayers&apos;</div><div class="line">        &#125;]</div><div class="line">    &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>2 然后在代码中可以如下方式构造layer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">require([&quot;esri/map&quot;, &quot;extLayers/gaodeLayer&quot;, &quot;dojo/domReady!&quot;], function (Map, gaodeLayer) &#123;</div><div class="line">       var map = new Map(&quot;map&quot;, &#123;</div><div class="line">           center: [116, 28],</div><div class="line">           zoom: 5</div><div class="line">       &#125;);</div><div class="line">       var baselayer = new gaodeLayer();//默认加载矢量 new gaodeLayer(&#123;layertype:&quot;road&quot;&#125;);也可以</div><div class="line">       //var baselayer = new gaodeLayer(&#123;layertype: &quot;st&quot;&#125;);//加载卫星图</div><div class="line">       //var baselayer = new gaodeLayer(&#123;layertype: &quot;label&quot;&#125;);//加载标注图</div><div class="line">       map.addLayer(baselayer);//添加高德地图到map容器</div><div class="line">   &#125;);</div></pre></td></tr></table></figure></p>
-<p>备注：利用arcgis api for javascript 调用百度地图、天地图、高德地图与此类似</p>
-<h3 id="文件地址"><a href="#文件地址" class="headerlink" title="文件地址"></a>文件地址</h3><p>链接：<a href="http://pan.baidu.com/s/1hsLiDX6" target="_blank" rel="external">http://pan.baidu.com/s/1hsLiDX6</a><br>密码：wx15</p>
+        <h2 id="部署简要概述"><a href="#部署简要概述" class="headerlink" title="部署简要概述"></a>部署简要概述</h2><ul>
+<li>###<pre><code>1.首先需要创建一个github账号，然后 新建一个代码仓库
+2.配置SSH密钥，建立本地与github的连接
+3.安装 Git 与Node.js
+4.安装 Markdownpad （win10系统下需要安装 awesomium_v1.6.6_sdk_win.exe）
+5.安装 Hexo 插件与选择主题
+6.美化主题与添加第三方插件
+7.使用 Markdown 语法与 Git 指令编写发布博文            
+</code></pre></li>
+</ul>
 
       
     </div>
@@ -340,7 +367,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
+            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
           
         </div>
       
@@ -349,16 +376,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/30/J2EE开发环境搭建/" rel="next" title="J2EE开发环境搭建">
-                <i class="fa fa-chevron-left"></i> J2EE开发环境搭建
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/07/maven .war文件打包/" rel="prev" title="MAVEN .war文件打包">
-                MAVEN .war文件打包 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/25/Hexo-Next主题个性化定制/" rel="prev" title="Hexo Next主题个性化定制">
+                Hexo Next主题个性化定制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -473,7 +496,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件地址"><span class="nav-number">2.</span> <span class="nav-text">文件地址</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#部署简要概述"><span class="nav-number">1.</span> <span class="nav-text">部署简要概述</span></a></li></ol></div>
             
           </div>
         </section>
